@@ -3263,9 +3263,8 @@ const pad=n=>String(n).padStart(2,'0');
 async function load(){route();}
 function histState(mode){const bars=$$('#hist .bar');const h=mode==='center'?[5,9,15,28,50,78,92,78,50,28,15,9,5,3,2]:mode==='clipped'?[90,70,45,20,10,7,5,5,6,8,12,20,45,70,90]:[25,35,50,70,88,76,55,35,20,12,8,14,28,50,73];bars.forEach((b,i)=>b.style.height=h[i]+'%');$('#histText').textContent=mode==='clipped'?'Des pixels collés aux bords indiquent une perte potentielle : blancs écrêtés ou noirs bouchés.':'Une distribution n’est pas « belle » ou « laide » en soi : elle dépend de la scène et de l’intention.'}
 function openDrawer(){$('#drawer').classList.add('open');$('#drawer').setAttribute('aria-hidden','false')}function closeDrawer(){if($('#drawer')){$('#drawer').classList.remove('open');$('#drawer').setAttribute('aria-hidden','true')}}function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.08});$$('.reveal').forEach(e=>io.observe(e))}
-load();
-
 const pages={home,voir,decider,photographier,developper,critiquer,apprendre,outils,terrain,recherche};
+load();
 
 </script>
 </body></html>
